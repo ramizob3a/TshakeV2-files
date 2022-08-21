@@ -46,7 +46,7 @@ def updateCb(client, callback_query,redis):
   userFN = callback_query.from_user.first_name
   username = callback_query.from_user.username
   chatID = callback_query.message.chat.id
-  message_id = callback_query.message.message_id
+  message_id = callback_query.message.id
   if re.search("^rps.pyplay$",date):
     start = """✂️꒐ حجره ورقه مقص
 👤꒐ اضغط للعب مع ({})""".format(userFN)
@@ -103,7 +103,7 @@ def updateCb(client, callback_query,redis):
       InlineKeyboardButton("📃",callback_data="st2={}={}=1={}".format(user1,user2,chs)),
       InlineKeyboardButton("✂️",callback_data="st2={}={}=2={}".format(user1,user2,chs)),],
 
-      [InlineKeyboardButton("📣",url="t.me/rambo_syr")]
+      [InlineKeyboardButton("📣",url="t.me/zx_xx")]
       ])
     Bot("editMessageText",{"chat_id":chatID,"message_id":message_id,"text":go.format("✅",userFN,"⏺",userFn, userFn),"disable_web_page_preview":True,"reply_markup":kb})
 
@@ -160,7 +160,7 @@ def updateCb(client, callback_query,redis):
       InlineKeyboardButton("📃",callback_data="st1={}={}=1".format(userid,userID)),
       InlineKeyboardButton("✂️",callback_data="st1={}={}=2".format(userid,userID)),],
 
-      [InlineKeyboardButton("📣",url="t.me/rambo_syr")]
+      [InlineKeyboardButton("📣",url="t.me/zx_xx")]
       ])
 
     Bot("editMessageText",{"chat_id":chatID,"message_id":message_id,"text":go.format("⏺",userFn,"⏺",userFN, userFn),"disable_web_page_preview":True,"reply_markup":kb})
